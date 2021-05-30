@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Shopping.Client
+namespace Shopping.API
 {
     public class Program
     {
