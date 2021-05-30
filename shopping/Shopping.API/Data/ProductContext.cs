@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using Shopping.API.Models;
+using Shopping.API.Settings;
 using System.Collections.Generic;
 
 namespace Shopping.API.Data
@@ -11,12 +11,13 @@ namespace Shopping.API.Data
 
         public IMongoCollection<Product> Products { get; }
 
-        public ProductContext(IConfiguration configuration)
+        public ProductContext(IProductDatabaseSettings settings)
         {
-            var client = new MongoClient(configuration["DatabaseSettings:ConnectionString"]);
-            var database = client.GetDatabase(configuration["DatabaseSettings:DatabaseName"]);
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.DatabaseName);
 
-            Products = database.GetCollection<Product>(configuration["DatabaseSettings:CollectionName"]);
+            Products = database.GetCollection<Product>(settings.CollectionName);
+
             SeedData(Products);
         }
 

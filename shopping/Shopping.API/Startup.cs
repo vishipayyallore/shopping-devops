@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Shopping.API.Data;
+using Shopping.API.Settings;
 
 namespace Shopping.API
 {
@@ -27,6 +29,12 @@ namespace Shopping.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shopping.API", Version = "v1" });
             });
+
+            services.Configure<ProductDatabaseSettings>(
+                Configuration.GetSection(nameof(ProductDatabaseSettings)));
+
+            services.AddSingleton<IProductDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<ProductDatabaseSettings>>().Value);
 
             services.AddScoped<ProductContext>();
         }
