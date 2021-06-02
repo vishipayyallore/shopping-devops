@@ -1,4 +1,4 @@
-﻿namespace Shopping.API.Settings
+﻿namespace Shopping.API.Configuration
 {
 
     public class ProductDatabaseSettings : IProductDatabaseSettings

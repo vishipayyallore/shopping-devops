@@ -5,8 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using Shopping.API.Configuration;
 using Shopping.API.Data;
-using Shopping.API.Settings;
 
 namespace Shopping.API
 {
@@ -58,5 +58,7 @@ namespace Shopping.API
                 endpoints.MapControllers();
             });
         }
+
     }
+
 }

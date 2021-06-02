@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
+using Shopping.API.Configuration;
 using Shopping.API.Models;
-using Shopping.API.Settings;
 using System.Collections.Generic;
 
 namespace Shopping.API.Data

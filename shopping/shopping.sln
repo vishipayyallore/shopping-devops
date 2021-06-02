@@ -13,9 +13,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shopping", "shopping", "{2C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Client", "Shopping.Client\Shopping.Client.csproj", "{98895FD5-6503-4960-B5A7-ABCD084F1B53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.API", "Shopping.API\Shopping.API.csproj", "{A24DD785-4331-4686-9619-6253BD44899D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.API", "Shopping.API\Shopping.API.csproj", "{A24DD785-4331-4686-9619-6253BD44899D}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B097186F-0D0D-4B3E-894E-F8D73199F0CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{FE2A903A-3071-49C8-BB90-24E35679C08C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{7BF08235-0961-4457-BA39-7156EF6DBF8A}"
+	ProjectSection(SolutionItems) = preProject
+		..\documentation\images\UILookAndFeel.PNG = ..\documentation\images\UILookAndFeel.PNG
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +49,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{98895FD5-6503-4960-B5A7-ABCD084F1B53} = {2CC7E423-642C-4EA7-B096-8D07CC826F2B}
 		{A24DD785-4331-4686-9619-6253BD44899D} = {2CC7E423-642C-4EA7-B096-8D07CC826F2B}
+		{7BF08235-0961-4457-BA39-7156EF6DBF8A} = {FE2A903A-3071-49C8-BB90-24E35679C08C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6B20A84-3E6F-4FEC-B9EA-1580B55B15AA}
